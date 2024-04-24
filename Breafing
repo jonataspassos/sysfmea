@@ -1,0 +1,126 @@
+Sistema
+	Ativo(é um Bem patrimonial) Numero Patrimonial (CPF)
+	data compra
+	data de fim da garantia
+	Locais de dotação (onde pode ser colocado) (N/N TAGS)
+	Depreciação (porcentagem por ano)
+
+Localização (Histórico)
+	Sistema
+	TAG
+	Data
+	
+TAG-Identificador do ativo (tipo,localização,numero) (CEP) (Histórico de localização (data de comissionamento)(Estoque))
+	Tipo de equipamento
+	Localização
+	Número
+
+Tipo Equipamento [Ex.:Bomba]
+	Que equipamento
+	Campos de especificação
+
+Equipamento [Ex.: Bomba fabricante tal modelo tal]
+	- Fabricante
+	modelo/ano
+	Especificações (Descrições específicas do tipo de equipamento)
+	Dimensões
+	Componentes/sobressalente/Insumos (facilita a intercambialidade)
+	
+	
+Componentes/Sobressalentes/Insumos	
+	Fabricante
+	Nome
+	Material
+	Dimensões
+	Especificações
+	Código internacional SKU(hyrllann acha)
+	Unidade
+	Almoxarifado - Localização
+
+Unidade
+	Nome
+	Equivalencia (n/n taxa de conversão)
+	
+Lote COmponente/sobressalente/Insumos
+	Componentes/Sobressalentes/Insumos
+	Data de validade
+	Preço
+	Quantidade (Estoque)
+	Unidade
+	
+Saída COmponente/sobressalente/Insumos
+	Componentes/Sobressalentes/Insumos
+	Quem pegou
+	Quantidade
+	Unidade
+	Sistema
+	TAG
+	
+	
+Ordem de serviço
+	Solicitante
+	Responsável pela Fiscalização Alisson
+	Sistema (um só, animal!)
+	Status -
+		Planejada
+		Programada
+		Em Execução 
+		Pendente
+		Concluida
+		Cancelada
+	OS Pai (A partir de qual ela foi gerada)
+	
+	TAG (Localização)
+	H/H planejado:
+	
+	Data/hora Inicio:
+	Data/hora Fim:
+	
+	H/H executado:
+	
+	Horas programadas
+	Atraso (Dias) (Backlot) (Calculado)
+	Eficiência do processo (Calculado)
+	
+	Tipo de manutenção
+		Preditiva
+		Preventiva  (Periodicidade*)
+		Corretiva Planejada 
+		Corretiva  Não Planejada 
+	
+	TIPO DE PROBLEMA	
+		Mecânico
+		Elétrico 
+		Logistico 
+		Mão de obra qualificada 
+	Diagrama de ishikawa	
+		Método
+		Máquina 
+		Mão de Obra 
+		Matéria Prima 
+		Meio Ambiente 
+		Medida
+	STATUS	
+		Operando 80 a 100%
+		Operando parcialmente 10 a 80%
+		Parado
+	Descrição da Solicitação
+	Observações
+	Apropriação de Mão de obra(Apontamento da execução)
+		Nome e Nip (Assinatura)
+	Componentes/Sobressalentes/Insumos (Confirmação caso não haja na lista do Sistema/ COnfirmar inclusão definitiva na lista do sistema)
+		DESCRIÇÃO:
+		UNIDADE:
+		QTDE.:	
+		CUSTO:
+
+	Assinatura do responsavel (Fiscal Alisson)
+	Data
+	
+Registro de Análise de Falha (1 OS 1 Registro de Análise de falhas)
+	Componente/sobressalente/Insumo
+		Falha(1/n)
+			Ação(1/n)
+			Causa Provável (1/n)
+				Plano de investigação (Instruções de tarefa para verificação)
+		
